@@ -24,5 +24,13 @@ namespace ViagemApp
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Viagem viagem = new Viagem();
+            viagem.SetDistancia(double.Parse(txtDistancia.Text));
+            viagem.SetTempo(double.Parse(txtTempo.Text));
+            txtVelocidade.Text = viagem.CalcVelocidade().ToString();
+        }
     }
 }
