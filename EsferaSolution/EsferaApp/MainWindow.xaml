@@ -8,12 +8,12 @@
         Title="MainWindow" Height="225" Width="300">
     <Grid>
         <GroupBox Header="Área e Volume" HorizontalAlignment="Left" Height="169" Margin="10,10,0,0" VerticalAlignment="Top" Width="272"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="22,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtRaio" HorizontalAlignment="Left" Height="23" Margin="22,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBlock HorizontalAlignment="Left" Margin="22,37,0,0" TextWrapping="Wrap" Text="Raio" VerticalAlignment="Top"/>
-        <Button HorizontalAlignment="Left" Margin="22,97,0,0" VerticalAlignment="Top" Width="245" Content="Calcular"/>
+        <Button HorizontalAlignment="Left" Margin="22,97,0,0" VerticalAlignment="Top" Width="245" Content="Calcular" Click="Button_Click"/>
         <TextBlock HorizontalAlignment="Left" Margin="22,122,0,0" TextWrapping="Wrap" Text="Área" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="22,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="147,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtArea" HorizontalAlignment="Left" Height="23" Margin="22,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtVolume" HorizontalAlignment="Left" Height="23" Margin="147,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBlock HorizontalAlignment="Left" Margin="147,122,0,0" TextWrapping="Wrap" Text="Volume" VerticalAlignment="Top"/>
     </Grid>
 </Window>

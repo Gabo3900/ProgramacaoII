@@ -24,5 +24,13 @@ namespace EsferaApp
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Esfera esfera = new Esfera();
+            esfera.SetRaio(double.Parse(txtRaio.Text));
+            txtArea.Text = esfera.CalcArea().ToString();
+            txtVolume.Text = esfera.CalcVolume().ToString();
+        }
     }
 }
