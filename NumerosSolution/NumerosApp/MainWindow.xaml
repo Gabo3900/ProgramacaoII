@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NumerosApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="250" Width="400">
+        Title="MainWindow" Height="260" Width="400">
     <Grid>
         <GroupBox Header="Intervalo" HorizontalAlignment="Left" Height="82" Margin="10,10,0,0" VerticalAlignment="Top" Width="240"/>
         <TextBlock HorizontalAlignment="Left" Margin="29,35,0,0" TextWrapping="Wrap" Text="Início" VerticalAlignment="Top"/>
@@ -15,8 +15,8 @@
         <GroupBox Header="Opções" HorizontalAlignment="Left" Height="87" Margin="10,97,0,0" VerticalAlignment="Top" Width="240"/>
         <CheckBox Content="Pares" HorizontalAlignment="Left" Margin="29,122,0,0" VerticalAlignment="Top"/>
         <CheckBox Content="Ímpares" HorizontalAlignment="Left" Margin="29,151,0,0" VerticalAlignment="Top"/>
-        <Button Content="Calcular" HorizontalAlignment="Left" Margin="10,192,0,0" VerticalAlignment="Top" Width="240"/>
-        <TextBox HorizontalAlignment="Left" Height="202" Margin="255,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="127"/>
+        <Button Content="Calcular" HorizontalAlignment="Left" Margin="10,194,0,0" VerticalAlignment="Top" Width="240"/>
+        <TextBox HorizontalAlignment="Left" Height="209" Margin="255,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
 
     </Grid>
 </Window>
