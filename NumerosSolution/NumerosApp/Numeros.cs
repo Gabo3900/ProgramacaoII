@@ -32,7 +32,9 @@ namespace NumerosApp
                     counter++;
                 }
             }
-            return c;
+            int[] n = new int[counter];
+            Array.Copy(c, n, counter);
+            return n;
         }
     }
 }
