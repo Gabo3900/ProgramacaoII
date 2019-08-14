@@ -16,7 +16,7 @@
         <CheckBox x:Name="checkPar" Content="Pares" HorizontalAlignment="Left" Margin="29,122,0,0" VerticalAlignment="Top"/>
         <CheckBox x:Name="checkImpar" Content="Ímpares" HorizontalAlignment="Left" Margin="29,151,0,0" VerticalAlignment="Top"/>
         <Button Content="Calcular" HorizontalAlignment="Left" Margin="10,194,0,0" VerticalAlignment="Top" Width="240" Click="Button_Click"/>
-        <TextBox x:Name="txtNumeros" HorizontalAlignment="Left" Height="209" Margin="255,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <ListBox x:Name="listNumeros" HorizontalAlignment="Left" Height="209" Margin="255,10,0,0" VerticalAlignment="Top" Width="119"/>
 
     </Grid>
 </Window>

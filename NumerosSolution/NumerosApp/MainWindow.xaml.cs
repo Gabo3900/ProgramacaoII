@@ -29,7 +29,11 @@ namespace NumerosApp
         {
             Numeros n = new Numeros(int.Parse(txtInicio.Text), int.Parse(txtFim.Text));
             int[] numeros = n.Calcular(checkPar.IsChecked == true, checkImpar.IsChecked == true);
-            txtNumeros.Text = string.Join("\n", numeros);
+            listNumeros.Items.Clear();
+            for(int i = 0; i < numeros.Length; i++){
+                listNumeros.Items.Add(numeros[i]);
+            }
+            
         }
     }
 }
