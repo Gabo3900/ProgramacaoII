@@ -24,5 +24,12 @@ namespace NumerosApp
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Numeros n = new Numeros(int.Parse(txtInicio.Text), int.Parse(txtFim.Text));
+            int[] numeros = n.Calcular(checkPar.IsChecked == true, checkImpar.IsChecked == true);
+            txtNumeros.Text = string.Join("\n", numeros);
+        }
     }
 }
