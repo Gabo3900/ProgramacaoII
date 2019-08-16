@@ -1,0 +1,48 @@
+﻿<Window x:Class="BingoApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BingoApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="2*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <GroupBox Header="Número de Bolas" 
+                  Margin="4, 4, 4, 0"
+                  Grid.ColumnSpan="2">
+            <Grid VerticalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="3*"/>
+                </Grid.ColumnDefinitions>
+                <Slider Name="Slider" Minimum="10" Maximum="100" Value="50" TickFrequency="1" IsSnapToTickEnabled="True" ValueChanged="Slider_ValueChanged" />
+                <TextBox Name="txt" Margin="4, 0, 4, 0" Grid.Column="1" Text="50" IsReadOnly="True"/>
+                <Button Grid.Column="2" Content="Iniciar"/>
+            </Grid>
+        </GroupBox>
+        <Button Content="Sortear" Grid.Row="1"
+                Margin="4"/>
+        <TextBox Text="35" Grid.Row="1" Grid.Column="1"
+                 FontSize="48" 
+                 HorizontalContentAlignment="Center"
+                 VerticalContentAlignment="Center"
+                 Margin="4"/>
+        <GroupBox Header="Sorteados" 
+                  Margin="4,0,4,4"             
+                  Grid.Row="2"
+                  Grid.ColumnSpan="2">
+            <TextBox Text="1 - 3 - 23 - 35" />
+        </GroupBox>
+
+    </Grid>
+</Window>
