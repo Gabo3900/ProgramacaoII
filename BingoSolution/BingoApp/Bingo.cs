@@ -16,11 +16,15 @@ namespace BingoApp
             for (int i = 0; i < numBolas; i++) {
                 r = random.Next(numBolas);
                 foreach (int a in Sorteados())
-                if (r != a)
+                {
+                    if (r != a) break;
                     return r;
+                }
             }
             return -1;
         }
-        public int[] Sorteados() { }
+        public int[] Sorteados() {
+
+        }
     }
 }
