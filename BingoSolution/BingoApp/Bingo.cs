@@ -17,7 +17,7 @@ namespace BingoApp
                 r = random.Next(numBolas);
                 foreach (int a in Sorteados())
                 {
-                    if (r != a) break;
+                    if (r == a) break;
                     return r;
                 }
             }
