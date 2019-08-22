@@ -26,22 +26,23 @@
                     <ColumnDefinition Width="3*"/>
                 </Grid.ColumnDefinitions>
                 <Slider Name="Slider" Minimum="10" Maximum="100" Value="50" TickFrequency="1" IsSnapToTickEnabled="True" ValueChanged="Slider_ValueChanged" />
-                <TextBox Name="txt" Margin="4, 0, 4, 0" Grid.Column="1" Text="50" IsReadOnly="True"/>
+                <TextBox Name="txt" Margin="4, 0, 4, 0" Grid.Column="1" Text="50" TextChanged="Txt_TextChanged"/>
                 <Button Grid.Column="2" Content="Iniciar"/>
             </Grid>
         </GroupBox>
         <Button Content="Sortear" Grid.Row="1"
                 Margin="4"/>
-        <TextBox Text="35" Grid.Row="1" Grid.Column="1"
+        <TextBox Grid.Row="1" Grid.Column="1"
                  FontSize="48" 
                  HorizontalContentAlignment="Center"
                  VerticalContentAlignment="Center"
-                 Margin="4"/>
+                 Margin="4"
+                 IsReadOnly="True"/>
         <GroupBox Header="Sorteados" 
                   Margin="4,0,4,4"             
                   Grid.Row="2"
                   Grid.ColumnSpan="2">
-            <TextBox Text="1 - 3 - 23 - 35" />
+            <TextBox IsReadOnly="True"/>
         </GroupBox>
 
     </Grid>

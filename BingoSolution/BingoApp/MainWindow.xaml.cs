@@ -29,5 +29,10 @@ namespace BingoApp
         {
             if (txt != null) txt.Text = Slider.Value.ToString();
         }
+
+        private void Txt_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            Slider.Value = double.Parse(txt.Text);
+        }
     }
 }
