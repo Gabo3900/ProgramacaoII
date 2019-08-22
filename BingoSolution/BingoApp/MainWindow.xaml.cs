@@ -32,7 +32,20 @@ namespace BingoApp
 
         private void Txt_TextChanged(object sender, TextChangedEventArgs e)
         {
-            Slider.Value = double.Parse(txt.Text);
+            double value;
+            if (double.TryParse(txt.Text, out value))
+                Slider.Value = value;
+            else
+            {
+                MessageBox.Show("O valor desse campo deve ser um número de 10 a 100");
+                txt.Text = "10";
+            }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Bingo bingo = new Bingo();
+            bingo.Iniciar(int.Parse(txt.Text));
         }
     }
 }

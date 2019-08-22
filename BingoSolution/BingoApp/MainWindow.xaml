@@ -27,7 +27,7 @@
                 </Grid.ColumnDefinitions>
                 <Slider Name="Slider" Minimum="10" Maximum="100" Value="50" TickFrequency="1" IsSnapToTickEnabled="True" ValueChanged="Slider_ValueChanged" />
                 <TextBox Name="txt" Margin="4, 0, 4, 0" Grid.Column="1" Text="50" TextChanged="Txt_TextChanged"/>
-                <Button Grid.Column="2" Content="Iniciar"/>
+                <Button Grid.Column="2" Content="Iniciar" Click="Button_Click"/>
             </Grid>
         </GroupBox>
         <Button Content="Sortear" Grid.Row="1"
