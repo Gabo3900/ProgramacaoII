@@ -20,6 +20,8 @@ namespace BingoApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        private Bingo bingo;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -38,14 +40,24 @@ namespace BingoApp
             else
             {
                 MessageBox.Show("O valor desse campo deve ser um número de 10 a 100");
-                txt.Text = "10";
+                txt.Text = Slider.Value.ToString();
             }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Bingo bingo = new Bingo();
+            bingo = new Bingo();
             bingo.Iniciar(int.Parse(txt.Text));
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            if(bingo != null) txtSorteado.Text = bingo.Proximo().ToString();
+            txtSorteados.Text = "";
+            foreach (int i in bingo.Sorteados())
+            {
+                txtSorteados.Text += " - " + i;
+            }
         }
     }
 }

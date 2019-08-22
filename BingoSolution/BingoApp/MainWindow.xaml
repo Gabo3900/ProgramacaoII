@@ -31,9 +31,10 @@
             </Grid>
         </GroupBox>
         <Button Content="Sortear" Grid.Row="1"
-                Margin="4"/>
-        <TextBox Grid.Row="1" Grid.Column="1"
-                 FontSize="48" 
+                Margin="4" Click="Button_Click_1"/>
+        <TextBox Name="txtSorteado" 
+                 Grid.Row="1" Grid.Column="1"
+                 FontSize="48"
                  HorizontalContentAlignment="Center"
                  VerticalContentAlignment="Center"
                  Margin="4"
@@ -42,7 +43,7 @@
                   Margin="4,0,4,4"             
                   Grid.Row="2"
                   Grid.ColumnSpan="2">
-            <TextBox IsReadOnly="True"/>
+            <TextBox Name="txtSorteados" IsReadOnly="True"/>
         </GroupBox>
 
     </Grid>
