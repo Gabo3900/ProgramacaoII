@@ -48,16 +48,28 @@ namespace BingoApp
         {
             bingo = new Bingo();
             bingo.Iniciar(int.Parse(txt.Text));
+            txtSorteado.Text = "";
+            txtSorteados.Text = "";
+            btnSortear.IsEnabled = true;
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            if(bingo != null) txtSorteado.Text = bingo.Proximo().ToString();
-            txtSorteados.Text = "";
-            foreach (int i in bingo.Sorteados())
+            int x = bingo.Proximo();
+            if (x == -1)
             {
-                txtSorteados.Text += " - " + i;
+                btnSortear.IsEnabled = false;
+                txtSorteado.Text = "FIM!";
             }
+            else
+            {
+                txtSorteado.Text = x.ToString();
+                txtSorteados.Text = "";
+                foreach (int i in bingo.Sorteados())
+                {
+                    txtSorteados.Text +=  i + " ";
+                }
+            }          
         }
     }
 }

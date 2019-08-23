@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BingoApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Bingo" Height="450" Width="800" Icon="bingo.png">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*" />
@@ -30,7 +30,7 @@
                 <Button Grid.Column="2" Content="Iniciar" Click="Button_Click"/>
             </Grid>
         </GroupBox>
-        <Button Content="Sortear" Grid.Row="1"
+        <Button Name="btnSortear" IsEnabled="False" Content="Sortear" Grid.Row="1"
                 Margin="4" Click="Button_Click_1"/>
         <TextBox Name="txtSorteado" 
                  Grid.Row="1" Grid.Column="1"
@@ -43,7 +43,7 @@
                   Margin="4,0,4,4"             
                   Grid.Row="2"
                   Grid.ColumnSpan="2">
-            <TextBox Name="txtSorteados" IsReadOnly="True"/>
+            <TextBox Name="txtSorteados" IsReadOnly="True" TextWrapping="Wrap"/>
         </GroupBox>
 
     </Grid>
