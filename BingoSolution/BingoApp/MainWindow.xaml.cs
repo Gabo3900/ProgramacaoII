@@ -67,7 +67,7 @@ namespace BingoApp
                 txtSorteados.Text = "";
                 foreach (int i in bingo.Sorteados())
                 {
-                    txtSorteados.Text +=  i + " ";
+                    txtSorteados.Text +=  i + " - ";
                 }
             }          
         }

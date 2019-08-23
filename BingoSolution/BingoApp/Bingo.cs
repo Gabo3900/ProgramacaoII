@@ -17,7 +17,7 @@ namespace BingoApp
         }
         public int Proximo() {
             Random random = new Random();
-            for (int i = 0; i <= numBolas; i++) {
+            while (k < numBolas) {
                 int r = random.Next(numBolas) + 1;
                 if (Array.IndexOf(sorteados, r) == -1) {
                     sorteados[k++] = r;
