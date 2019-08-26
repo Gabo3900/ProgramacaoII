@@ -5,8 +5,44 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HistoricoApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="300" Width="400">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <GroupBox Header="Aluno">
+            <Grid Margin="4">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="Nome"/>
+                <TextBox Text="Aluno" Grid.Row="1"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Disciplina" Grid.Row="1">
+            <Grid Margin="4">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Nome"/>
+                <TextBlock Text="Semestre" Grid.Column="1"/>
+                <TextBlock Text="Média" Grid.Column="2"/>
+                <TextBox Text="Programação" Grid.Row="1"/>
+                <TextBox Text="2017.1" Grid.Row="1" Grid.Column="1"/>
+                <TextBox Text="85" Grid.Row="1" Grid.Column="2"/>
+                <CheckBox Content="Aprovado" Grid.Row="1" Grid.Column="3" VerticalAlignment="Center"/>
+            </Grid>
+        </GroupBox>
     </Grid>
 </Window>
