@@ -28,12 +28,7 @@ namespace NumerosApp
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Numeros n = new Numeros(int.Parse(txtInicio.Text), int.Parse(txtFim.Text));
-            int[] numeros = n.Calcular(checkPar.IsChecked == true, checkImpar.IsChecked == true);
-            listNumeros.Items.Clear();
-            for(int i = 0; i < numeros.Length; i++){
-                listNumeros.Items.Add(numeros[i]);
-            }
-            
+            listNumeros.ItemsSource = n.Calcular(checkPar.IsChecked == true, checkImpar.IsChecked == true);
         }
     }
 }
