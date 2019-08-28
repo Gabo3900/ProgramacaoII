@@ -20,9 +20,27 @@ namespace HistoricoApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        private Historico historico;
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void BtnAluno_Click(object sender, RoutedEventArgs e)
+        {
+            historico = new Historico(txtAluno.Text);
+        }
+
+        private void BtnInserir_Click(object sender, RoutedEventArgs e)
+        {
+            Disciplina d = new Disciplina(txtDisc.Text, txtSemestre.Text, int.Parse(txtMedia.Text), cekAprovado.IsChecked.Value);
+            historico.Inserir(d);
+            listDiscs.ItemsSource = historico.Listar();
+        }
+
+        private void BtnIRA_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show($"A IRA do aluno eh {historico.CalcularIRA()}");
         }
     }
 }
