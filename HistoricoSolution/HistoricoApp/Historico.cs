@@ -11,6 +11,7 @@ namespace HistoricoApp
         private string aluno;
         private Disciplina[] discs = new Disciplina[10];
         private int k;
+        public Historico(string aluno) { this.aluno = aluno; }
         public void Inserir(Disciplina d) { discs[k++] = d; }
         public Disciplina[] Listar()
         {
