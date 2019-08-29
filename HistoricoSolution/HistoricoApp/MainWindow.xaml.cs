@@ -29,6 +29,9 @@ namespace HistoricoApp
         private void BtnAluno_Click(object sender, RoutedEventArgs e)
         {
             historico = new Historico(txtAluno.Text);
+            btnInserir.IsEnabled = true;
+            btnExcluir.IsEnabled = true;
+            btnIRA.IsEnabled = true;
         }
 
         private void BtnInserir_Click(object sender, RoutedEventArgs e)
@@ -40,7 +43,12 @@ namespace HistoricoApp
 
         private void BtnIRA_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show($"A IRA do aluno eh {historico.CalcularIRA()}");
+            MessageBox.Show(historico.CalcularIRA().ToString());
+        }
+
+        private void BtnExcluir_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show(listDiscs.SelectedIndex.ToString());
         }
     }
 }
