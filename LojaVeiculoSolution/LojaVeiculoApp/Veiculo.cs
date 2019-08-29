@@ -22,10 +22,7 @@ namespace LojaVeiculoApp
             this.ano = ano;
             this.preco = preco;
         }
-        public void Vender()
-        {
-            vendido = true;
-        }
+        public void Vender() { vendido = true; }
         public decimal GetPreco() { return preco; }
         public bool GetVendido() { return vendido; }
     }
