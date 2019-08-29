@@ -25,5 +25,11 @@ namespace HistoricoApp
             foreach (Disciplina d in Listar()) { soma += d.GetMedia(); }
             return soma / k;
         }
+        public void Excluir(int index)
+        {
+            int p = index;
+            while (p <= k) { discs[p++] = discs[p]; }
+            k--;
+        }
     }
 }

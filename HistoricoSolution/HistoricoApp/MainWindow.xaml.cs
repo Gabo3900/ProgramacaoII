@@ -48,7 +48,8 @@ namespace HistoricoApp
 
         private void BtnExcluir_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(listDiscs.SelectedIndex.ToString());
+            historico.Excluir(listDiscs.SelectedIndex);
+            listDiscs.ItemsSource = historico.Listar();
         }
     }
 }
