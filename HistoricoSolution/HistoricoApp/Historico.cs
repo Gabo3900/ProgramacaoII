@@ -11,6 +11,7 @@ namespace HistoricoApp
         private string aluno;
         private Disciplina[] discs = new Disciplina[10];
         private int k;
+        public Historico(string aluno) { this.aluno = aluno; }
         public void Inserir(Disciplina d) { discs[k++] = d; }
         public Disciplina[] Listar()
         {
@@ -23,6 +24,12 @@ namespace HistoricoApp
             int soma = 0;
             foreach (Disciplina d in Listar()) { soma += d.GetMedia(); }
             return soma / k;
+        }
+        public void Excluir(int index)
+        {
+            int p = index;
+            while (p <= k) { discs[p++] = discs[p]; }
+            k--;
         }
     }
 }
