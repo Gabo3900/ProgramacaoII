@@ -5,13 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Ex04"
         mc:Ignorable="d"
-        Title="MainWindow" Height="250" Width="400">
+        Title="MainWindow" Height="240" Width="400">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <GroupBox Header="País">
+        <GroupBox Header="País" Margin="5">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition/>
@@ -27,7 +27,10 @@
                 <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="10,10,0,0" Text="Ouro" VerticalAlignment="Top"/>
                 <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="10,10,0,0" Text="Prata" VerticalAlignment="Top"/>
                 <TextBlock Grid.Column="3" HorizontalAlignment="Left" Margin="10,10,0,0" Text="Bronze" VerticalAlignment="Top"/>
-
+                <TextBox HorizontalAlignment="Center" Margin="10,7,18,8" Grid.Row="1" VerticalAlignment="Center" Width="110"/>
+                <TextBox HorizontalAlignment="Center" Margin="10,5,16,8" Grid.Row="1" VerticalAlignment="Center" Width="40" Grid.Column="1"/>
+                <TextBox HorizontalAlignment="Center" Margin="10,5,16,8" Grid.Row="1" VerticalAlignment="Center" Width="40" Grid.Column="2"/>
+                <TextBox HorizontalAlignment="Center" Margin="10,6,16,7" Grid.Row="1" VerticalAlignment="Center" Width="40" Grid.Column="3"/>
             </Grid>
         </GroupBox>
         <ListBox Margin="5" Grid.Row="1"/>
