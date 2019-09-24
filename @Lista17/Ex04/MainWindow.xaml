@@ -5,8 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Ex04"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="250" Width="400">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <GroupBox Header="País">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" Text="Nome" VerticalAlignment="Top"/>
+                <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="10,10,0,0" Text="Ouro" VerticalAlignment="Top"/>
+                <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="10,10,0,0" Text="Prata" VerticalAlignment="Top"/>
+                <TextBlock Grid.Column="3" HorizontalAlignment="Left" Margin="10,10,0,0" Text="Bronze" VerticalAlignment="Top"/>
+
+            </Grid>
+        </GroupBox>
+        <ListBox Margin="5" Grid.Row="1"/>
     </Grid>
 </Window>
