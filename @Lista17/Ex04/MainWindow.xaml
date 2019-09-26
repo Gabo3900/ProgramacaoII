@@ -5,11 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Ex04"
         mc:Ignorable="d"
-        Title="MainWindow" Height="240" Width="400">
+        Title="MainWindow" Height="300" Width="400">
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
             <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
         <GroupBox Header="País" Margin="5">
             <Grid>
@@ -27,12 +28,13 @@
                 <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="10,10,0,0" Text="Ouro" VerticalAlignment="Top"/>
                 <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="10,10,0,0" Text="Prata" VerticalAlignment="Top"/>
                 <TextBlock Grid.Column="3" HorizontalAlignment="Left" Margin="10,10,0,0" Text="Bronze" VerticalAlignment="Top"/>
-                <TextBox HorizontalAlignment="Center" Margin="10,7,18,8" Grid.Row="1" VerticalAlignment="Center" Width="110"/>
-                <TextBox HorizontalAlignment="Center" Margin="10,5,16,8" Grid.Row="1" VerticalAlignment="Center" Width="40" Grid.Column="1"/>
-                <TextBox HorizontalAlignment="Center" Margin="10,5,16,8" Grid.Row="1" VerticalAlignment="Center" Width="40" Grid.Column="2"/>
-                <TextBox HorizontalAlignment="Center" Margin="10,6,16,7" Grid.Row="1" VerticalAlignment="Center" Width="40" Grid.Column="3"/>
+                <TextBox Name="txtNome" HorizontalAlignment="Center" Margin="10,10,28,8" Grid.Row="1" VerticalAlignment="Center" Width="110"/>
+                <TextBox Name="txtOuro" HorizontalAlignment="Center" Margin="10,8,27,10" Grid.Row="1" VerticalAlignment="Center" Width="37" Grid.Column="1"/>
+                <TextBox Name="txtPrata" HorizontalAlignment="Center" Margin="10,8,27,10" Grid.Row="1" VerticalAlignment="Center" Width="37" Grid.Column="2"/>
+                <TextBox Name="txtBronze" HorizontalAlignment="Center" Margin="10,8,27,10" Grid.Row="1" VerticalAlignment="Center" Width="37" Grid.Column="3"/>
             </Grid>
         </GroupBox>
-        <ListBox Margin="5" Grid.Row="1"/>
+        <ListBox Name="listQuadro" Margin="5" Grid.Row="2"/>
+        <Button Content="País" HorizontalAlignment="Left" Margin="307,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="Button_Click" Height="30"/>
     </Grid>
 </Window>

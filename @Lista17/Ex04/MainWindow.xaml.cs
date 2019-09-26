@@ -20,9 +20,21 @@ namespace Ex04
     /// </summary>
     public partial class MainWindow : Window
     {
+        private QuadroMedalhas quadro = new QuadroMedalhas();
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            string n = txtNome.Text;
+            int o = int.Parse(txtOuro.Text);
+            int p = int.Parse(txtPrata.Text);
+            int b = int.Parse(txtBronze.Text);
+            Pais pais = new Pais(n, o, p, b);
+            quadro.Inserir(pais);
+            listQuadro.ItemsSource = quadro.Listar();
         }
     }
 }

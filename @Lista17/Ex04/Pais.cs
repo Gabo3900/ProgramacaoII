@@ -35,7 +35,7 @@ namespace Ex04
         }
         public override string ToString()
         {
-            return nome;
+            return $"{nome} {ouro} {prata} {bronze}";
         }
     }
 }
